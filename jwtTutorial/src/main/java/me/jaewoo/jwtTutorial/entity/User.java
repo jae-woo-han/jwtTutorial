@@ -20,9 +20,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity
-@Table(name = "user")
-@Getter
+@Entity //DB 테이블과 1:1로 맵핑되는 객체를 뜻함
+@Table(name = "user")//테이블명 지정
+@Getter //롬복 어노테이션은 실무에서는 고려해야함
 @Setter
 @Builder
 @AllArgsConstructor
