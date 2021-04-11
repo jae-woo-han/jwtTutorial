@@ -68,7 +68,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {// 추가 설�
 			.antMatchers("/api/authenticate").permitAll()//로그인
 			.antMatchers("/api/signup").permitAll()//회원가입
 			.anyRequest().authenticated()
-			//적용
+			// 만들어 놓은 토큰 프로바이더를 이용하여 적용
 			.and()
 			.apply(new JwtSecurityConfig(tokenProvider));
 	}
